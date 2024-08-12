@@ -1,0 +1,86 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "description": "lavish 2 bedroom apartment",
+        "size":"2 bedroom",
+        "category": "rental",
+        "price": 150000,
+        "location":"Karen",
+        "image_url":"https://media.istockphoto.com/id/1695936429/photo/business-towers-and-green-leaves-london.jpg?s=612x612&w=is&k=20&c=kQ8LybBBgNogXzCvYyUeFzJrqjgiax7bcUSC-GxWWsU="
+      },
+      {
+        "id": 2,
+        "description": "fully furnished 3 bedroom apartment",
+        "size":"3 bedroom",
+        "category": "rental",
+        "price": 70000,
+        "location":"langata",
+        "image_url":"https://plus.unsplash.com/premium_photo-1678916185493-781b5b61b93b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      },{
+        "id": 3,
+        "description": "2 bedroom family home",
+        "size":"2 bedroom",
+        "category": "for sale",
+        "price": 4500000,
+        "location":"Karen",
+        "image_url":"https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      },{
+        "id": 4,
+        "description": "spacious 1 bedroom Apartment",
+        "size":"1 bedroom",
+        "category": "rental",
+        "price": 30000,
+        "location":"Embakasi",
+        "image_url":"https://images.unsplash.com/photo-1422818159909-e2fc50042acb?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      },{
+        "id": 5,
+        "description": "fully furnished studio Apartment",
+        "size":"studio",
+        "category": "rental",
+        "price": 40000,
+        "location":"Ruiru",
+        "image_url":"https://images.unsplash.com/photo-1506812925688-822b4a73db22?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1aWxkaW5ncyUyMGludGVyaW9yfGVufDB8fDB8fHww"
+      },{
+        "id": 6,
+        "description": "luxury villa with swimming pool",
+        "size":"5 bedroom",
+        "category": "for sale",
+        "price": 7000000,
+        "location":"Ruiru",
+        "image_url":"https://media.istockphoto.com/id/1540164261/photo/luxury-house-with-swimming-pool-at-night.jpg?s=612x612&w=is&k=20&c=_EE3qt6aOUfgk4qGgE3AVbc0v8Yh9gyACmOpBaZwP0Y="
+      },{
+        "id": 7,
+        "description": "3 bedroom bungalow",
+        "size":"3 bedroom",
+        "category": "rental",
+        "price": 100000,
+        "location":"langata",
+        "image_url":"https://media.istockphoto.com/id/1442364915/photo/contemporary-living-zone-with-living-room-outdoor-relaxation-space-with-tropical-garden-with.jpg?s=612x612&w=is&k=20&c=VIFVyibq-W7bFpccg58rzi0DZ6rQoL7mRM-AEJegM7c="
+      },{
+        "id": 8,
+        "description": "1 bedroom man cave",
+        "size":"1 bedroom",
+        "category": "for sale",
+        "price": 2000000,
+        "location":"Roysambu",
+        "image_url":"https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      },{
+        "id": 9,
+        "description": "studio Apartment",
+        "size":"studio",
+        "category": "rental",
+        "price": 60000,
+        "location":"Roysambu",
+        "image_url":"https://plus.unsplash.com/premium_photo-1674676471154-1acce154992d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      },{
+        "id": 10,
+        "description": "penthouse",
+        "size":"4 bedroom",
+        "category": "for sale",
+        "price": 3500000,
+        "location":"Embakasi",
+        "image_url":"https://images.unsplash.com/photo-1675279200694-8529c73b1fd0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEFwYXJ0bWVudCUyMGludGVyaW9yfGVufDB8fDB8fHww"
+      }
+    ]
+  }
