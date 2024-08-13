@@ -56,7 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  /* background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); */
+   background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
   background-position: center;
   background-size: cover;
   margin-top: 60px;
@@ -75,9 +75,50 @@ body {
   height: 70%;
 }
 
-.search{
+.search-bar-container {
+  background-color: silver;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  justify-content: center;
+ 
+}
+
+.search-inputs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+ border: none;
+}
+
+.search-input {
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 300px;
+ padding: 10px;
+}
+
+.search-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.search-button:hover {
+  background-color: yellowgreen;
+}
+
+.category-search{
 
 }
+
+
 
 
 
