@@ -4,11 +4,10 @@ import React from 'react';
 function PropertiesForm({ property, onAdd }) {
   return (
     <div className='properties-form'>
-      <h3>{property.location}</h3>
-      <img className='images' src={property.image_url} alt={property.description} />
-      <a href='#'>View</a> 
-
       <div>
+      <img className='images' src={property.image_url} alt={property.description} />
+      <h3>{property.location}</h3> 
+      <a href='#'>View</a> 
       <button 
         className='add-button' 
         onClick={() => onAdd(property)}
@@ -17,6 +16,7 @@ function PropertiesForm({ property, onAdd }) {
       </button>
       </div>
     </div>
+
     
     
   );

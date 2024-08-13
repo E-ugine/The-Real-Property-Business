@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
@@ -7,6 +8,8 @@ import PropertiesList from './components/PropertiesList';
 import PropertiesToBuy from './components/PropertiesToBuy';
 import Filter from './components/Filter';
 import SearchBar from './components/SearchBar';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
 
 function App() {
   const [properties, setProperties] = useState([]);
@@ -21,6 +24,8 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => {
         setProperties(data);
+
+
         const uniqueCategories = [...new Set(data.map(property => property.category))];
         setCategories(uniqueCategories);
       });
@@ -47,33 +52,41 @@ function App() {
   });
 
   return (
-    <div>
-      <NavBar />
-      <SearchBar 
-        search={search}
-        setSearch={setSearch}
-        category={category}
-        setCategory={setCategory}
-        categories={categories}
-      />
-      <Filter
-        search={search}
-        setSearch={setSearch}
-        setSortBy={setSortBy}
-        category={category}
-        setCategory={setCategory}
-        categories={categories}
-      />
-      <Hero />
-      <PropertiesList 
-        properties={sortedProperties} 
-        onAdd={handleBuyHome}
-      />
-      <PropertiesToBuy 
-        properties={selectedHomes} 
-        onAdd={handleBuyHome} 
-      />
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <SearchBar 
+                search={search}
+                setSearch={setSearch}
+                
+              />
+              <Filter
+                search={search}
+                setSearch={setSearch}
+                setSortBy={setSortBy}
+                category={category}
+                setCategory={setCategory}
+                categories={categories}
+              />
+              <Hero />
+              <PropertiesList 
+                properties={sortedProperties} 
+                onAdd={handleBuyHome}
+              />
+              <PropertiesToBuy 
+                properties={selectedHomes} 
+                onAdd={handleBuyHome} 
+              />
+            </>
+          } />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<LogIn />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

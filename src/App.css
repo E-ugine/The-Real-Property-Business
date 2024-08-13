@@ -38,70 +38,29 @@ body {
 .nav-actions a {
   margin-left: 20px;
   text-decoration: none;
-  color: #000;
+  color:blue;
   padding: 5px 10px;
   border-radius: 3px;
 }
 
 .nav-actions a:hover {
-  color: #ffffff;
   background-color: green;
 }
 
-.hero-content {
-  color: rgb(59, 48, 48);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-   background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
-  background-position: center;
-  background-size: cover;
-  margin-top: 60px;
-}
-
-.hero-title {
-  color: green;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.properties-list-title{
-  color: mediumaquamarine;
-  text-align: center;
-}
-
-
-.properties-form{
-  display: flex;
-  flex-direction:column;
-  width: 60%;
-  height: 70%;
-}
-
-.add-button{
-  color: red;
-  max-width: 70px;
-  flex-direction: row-reverse;
-  max-width: 70px;
-  padding: 5px;
-  text-align: center;
-  flex: 1; 
-  margin:  5px;
-}
-
 .search-bar-container {
-  background-color: silver;
+  background-color: mediumturquoise;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5%;
   justify-content: center;
+  height: 230px;
+  background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
  
+  
 }
+
 
 .search-inputs {
   display: flex;
@@ -129,6 +88,49 @@ body {
 
 .search-button:hover {
   background-color: yellowgreen;
+}
+
+.hero-content { /* paragraph in hero can be styled here */
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+   /* background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
+  background-position: center; */
+  background-size: cover;
+  margin-top: 60px;
+}
+
+.hero-title {
+  color: green;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.properties-list-title{
+  color: mediumaquamarine;
+  text-align: center;
+}
+
+
+.properties-form{
+  display: flex;
+  flex-direction:row;
+  width: 60%;
+  height: 70%;
+}
+
+.add-button{
+  color: red;
+  max-width: 70px;
+  flex-direction: row-reverse;
+  max-width: 70px;
+  padding: 5px;
+  text-align: center;
+  flex: 1; 
+  margin:  5px;
 }
 
 .images{
