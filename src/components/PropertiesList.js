@@ -1,29 +1,21 @@
-import React , {useEffect, useState} from 'react'
+import React from 'react'
+import PropertiesForm from './PropertiesForm';
 
- function PropertiesList() {
+ function PropertiesList({properties}) {
 
-  const [properties, setProperties] = useState([])
-
-  useEffect(()=> {
-    fetch('http://localhost:3000/properties')
-    .then((resp) => resp.json())
-    .then((data) => {
-      setProperties(data)
-    })
-  },[])
-
+ 
   return (
-    <div>
-      <ul>
-        {properties.map((property) => {
-          return <l key={property.id}>
-            {property.location}
-           {property.description}
-           {property.size}
-          <img src={property.image_url} alt= "A beautiful home" />
-          </l>
-        })}
-      </ul>
+    <div className='properties-list'>
+     <h2>Buy Your Dream Home Now!</h2>
+     <div className='properties-form'>
+      {properties.map((property) => {
+      return  <PropertiesForm 
+          key={property.id}
+          property = {property}
+
+          />
+      })}
+     </div>
     </div>
   )
 }

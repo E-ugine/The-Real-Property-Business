@@ -56,7 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg");
+  /* background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); */
   background-position: center;
   background-size: cover;
   margin-top: 60px;
@@ -67,5 +67,17 @@ body {
   font-size: 2rem;
   text-align: center;
 }
+
+.properties-form{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 70%;
+}
+
+.search{
+
+}
+
 
 
