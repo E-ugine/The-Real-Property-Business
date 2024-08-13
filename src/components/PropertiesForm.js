@@ -5,15 +5,20 @@ function PropertiesForm({ property, onAdd }) {
   return (
     <div className='properties-form'>
       <h3>{property.location}</h3>
-      <img src={property.image_url} alt={property.description} />
-      <a href='#'>View</a>
+      <img className='images' src={property.image_url} alt={property.description} />
+      <a href='#'>View</a> 
+
+      <div>
       <button 
         className='add-button' 
         onClick={() => onAdd(property)}
       >
-        AddToHome
+        Add
       </button>
+      </div>
     </div>
+    
+    
   );
 }
 
