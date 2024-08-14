@@ -14,7 +14,7 @@ function App() {
   const[selectedHomes, setSelectedHomes] = useState([]);
 
   useEffect(()=> {
-    fetch('http://localhost:3000/properties')
+    fetch('http://localhost:8000/properties')
     .then((resp) => resp.json())
     .then((data) => {
       setProperties(data)
