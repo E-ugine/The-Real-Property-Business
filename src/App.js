@@ -59,6 +59,7 @@ function App() {
   const handleSearch = (searchLocation, searchMaxPrice) => {
     setLocation(searchLocation);
     setMaxPrice(searchMaxPrice);
+    setSearch('');  // Clear search input after search is triggered
   };
 
   const filteredProperties = properties
