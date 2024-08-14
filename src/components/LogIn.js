@@ -10,10 +10,7 @@ function LogIn() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    // Perform login logic here
-    // Example: Verify user credentials, etc.
-
-    // After login logic, navigate back to the home page
+   
     navigate("/");
   }
 
