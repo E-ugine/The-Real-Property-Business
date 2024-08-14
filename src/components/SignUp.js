@@ -1,8 +1,7 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SignUp() {
+function SignUp({ setUser }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -12,6 +11,9 @@ function SignUp() {
     event.preventDefault();
 
     
+    const user = { username, email };
+    setUser(user);
+
     navigate("/");
   }
 

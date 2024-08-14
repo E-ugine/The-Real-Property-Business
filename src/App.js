@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
@@ -18,6 +18,9 @@ function App() {
   const [sortBy, setSortBy] = useState("");
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([]);
+  const [location, setLocation] = useState("");  
+  const [maxPrice, setMaxPrice] = useState("");  
+  const [user, setUser] = useState(null); 
 
   useEffect(() => {
     fetch('http://localhost:3000/properties')
@@ -35,9 +38,16 @@ function App() {
     }
   }
 
+  const handleSearch = (searchLocation, searchMaxPrice) => {
+    setLocation(searchLocation);
+    setMaxPrice(searchMaxPrice);
+  };
+
   const filteredProperties = properties
-    .filter(property => property.description.includes(search))
-    .filter(property => category === "" || property.category === category);
+    .filter(property => property.location.includes(search))
+    .filter(property => category === "" || property.category === category)
+    .filter(property => location === "" || property.location.includes(location)) 
+    .filter(property => maxPrice === "" || property.price <= parseInt(maxPrice)); 
 
   const sortedProperties = [...filteredProperties].sort((a, b) => {
     if (sortBy === "location") {
@@ -52,13 +62,16 @@ function App() {
   return (
     <Router>
       <div>
-        <NavBar />
+        <NavBar user={user} />
         <Routes>
-          <Route path="/" element={
+          <Route path="/signup" element={<SignUp setUser={setUser} />} />
+          <Route path="/login" element={<LogIn setUser={setUser} />} />
+          <Route path="/" element={user ? (
             <>
               <SearchBar 
                 search={search}
                 setSearch={setSearch}
+                onSearch={handleSearch} 
               />
               <Filter
                 search={search}
@@ -72,15 +85,16 @@ function App() {
               <PropertiesList 
                 properties={sortedProperties} 
                 onAdd={handleBuyHome}
+                onDelete={(id) => setSelectedHomes(selectedHomes.filter(property => property.id !== id))} 
               />
               <PropertiesToBuy 
                 properties={selectedHomes} 
                 onAdd={handleBuyHome} 
               />
             </>
-          } />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<LogIn />} />
+          ) : (
+            <Navigate to="/login" />
+          )} />
           <Route path="/property/:id" element={<PropertyDetails properties={properties} />} /> 
         </Routes>
       </div>

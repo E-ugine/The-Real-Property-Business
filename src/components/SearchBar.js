@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const SearchBar = ({ search, setSearch }) => {
+const SearchBar = ({ onSearch }) => {
+  const [location, setLocation] = useState("");
+  const [maxPrice, setMaxPrice] = useState("");
+
+  const handleSearchClick = () => {
+    onSearch(location, maxPrice);
+  };
+
   return (
     <div className="search-bar-container">
-      <div>
-       
-      </div>
       <div className="search-inputs">
-        <input 
-          type="text" 
-          className="search-input" 
-          placeholder="Enter a location" 
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Enter a location"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         />
-        <button className="search-button">Search</button>
+        <input
+          type="number"
+          className="search-input"
+          placeholder="Max Price"
+          value={maxPrice}
+          onChange={(e) => setMaxPrice(e.target.value)}
+        />
+        <button className="search-button" onClick={handleSearchClick}>
+          Search
+        </button>
       </div>
     </div>
   );

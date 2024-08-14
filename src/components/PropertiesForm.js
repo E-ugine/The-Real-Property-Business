@@ -42,7 +42,7 @@ function PropertiesForm({ onUpdate }) {
     .then((resp) => resp.json())
     .then((data) => {
       onUpdate(data);
-      navigate("/");//After an update, the page should redirect to home page.
+      navigate("/");
     });
   }
 
