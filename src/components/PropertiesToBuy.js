@@ -1,19 +1,21 @@
-import React from 'react'
-import PropertiesForm from './PropertiesForm';
+import React from 'react';
+import PropertiesCard from './PropertiesCard';
 
-function PropertiesToBuy({properties, onAdd}) {
+function PropertiesToBuy({ properties = [], onAdd }) {
   return (
-    <div className='properties-to-buy' >
-      <h2>My Properties</h2>
+    <div className='properties-to-buy'>
+      <h2 className='properties-to-buy-title'>My Properties</h2>
       <div className='properties-form'>
-      {properties.map((property) => {
-        return <PropertiesForm key={property.id}
-        property={property}
-        onClick = {() => onAdd(property.id)}
-        />
-      })}
+        {properties.map((property) => (
+          <PropertiesCard
+            key={property.id}
+            property={property}
+            onClick={() => onAdd(property)}
+          />
+        ))}
       </div>
     </div>
-  )
+  );
 }
+
 export default PropertiesToBuy;

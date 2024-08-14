@@ -13,7 +13,7 @@ body {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -23,11 +23,10 @@ body {
 
 .nav-brand {
   margin: 0;
-  color: #d92228;
+  color: aqua;
   font-size: 1.5rem;
   flex: 1;
 }
-
 
 .nav-actions {
   margin-left: auto;
@@ -38,26 +37,61 @@ body {
 .nav-actions a {
   margin-left: 20px;
   text-decoration: none;
-  color: #000;
+  color: blue;
   padding: 5px 10px;
   border-radius: 3px;
 }
 
 .nav-actions a:hover {
-  color: #ffffff;
   background-color: green;
 }
 
+.search-bar-container {
+  background-color: mediumturquoise;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+  justify-content: center;
+  height: 230px;
+  background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg");
+}
+
+.search-inputs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border: none;
+}
+
+.search-input {
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 300px;
+  padding: 10px;
+}
+
+.search-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: yellowgreen;
+}
+
 .hero-content {
-  color: rgb(59, 48, 48);
-  height: 100vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  /* background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); */
-  background-position: center;
   background-size: cover;
   margin-top: 60px;
 }
@@ -68,16 +102,33 @@ body {
   text-align: center;
 }
 
-.properties-form{
+.properties-list-title {
+  color: mediumaquamarine;
+  text-align: center;
+}
+
+.properties-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 60%;
   height: 70%;
 }
 
-.search{
-
+.add-button {
+  color: red;
+  max-width: 70px;
+  flex-direction: row-reverse;
+  padding: 5px;
+  text-align: center;
+  flex: 1;
+  margin: 5px;
 }
 
+.images {
+  max-width: 250px;
+}
 
+.properties-to-buy-title {
+  text-align: center;
+}
 
