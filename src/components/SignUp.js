@@ -10,10 +10,17 @@ function SignUp({ setUser }) {
   function handleSubmit(event) {
     event.preventDefault();
 
+<<<<<<< HEAD
+
+=======
     
+<<<<<<< HEAD
     const user = { username, email };
     setUser(user);
 
+=======
+>>>>>>> a14ae872f0a26ddc714f102671260067a1e61167
+>>>>>>> ed62d24303a5409290167f6dee007ea21faffa73
     navigate("/");
   }
 
