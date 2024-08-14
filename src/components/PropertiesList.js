@@ -1,11 +1,12 @@
 import React from 'react';
 import PropertiesCard from './PropertiesCard';
 
-function PropertiesList({ properties, onAdd, onDelete, location, maxPrice }) {
+function PropertiesList({ properties, onAdd, onDelete, location, maxPrice, category }) {
   const filteredProperties = properties.filter((property) => {
-    const matchesLocation = location ? property.location.toLowerCase().includes(location.toLowerCase()) : true;
+    const matchesLocation = location ? property.location.includes(location) : true;
     const matchesMaxPrice = maxPrice ? property.price <= parseFloat(maxPrice) : true;
-    return matchesLocation && matchesMaxPrice;
+    const matchesCategory = category ? property.category === category : true;
+    return matchesLocation && matchesMaxPrice && matchesCategory;
   });
 
   return (

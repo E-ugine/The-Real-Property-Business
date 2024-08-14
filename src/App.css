@@ -1,8 +1,146 @@
+/* for large screens, this is the default*/
 body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+
+/*start of media queries*/
+/* For tablets f screens up to 768px */
+@media (max-width: 768px) {
+
+  .nav-bar {
+    padding: 0 10px;
+  }
+
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-actions a {
+    margin-left: 15px;
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  .login-form, .signup-form {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .search-inputs {
+    width: 80%;
+  }
+
+  .search-input {
+    width: 200px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .properties-form {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .add-button {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .images {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Then for mobile devices of screens up to 480px */
+@media (max-width: 480px) {
+
+  .nav-bar {
+    padding: 0 5px;
+    height: 50px;
+  }
+
+  .nav-brand {
+    font-size: 1rem;
+  }
+
+  .nav-actions a {
+    margin-left: 10px;
+    padding: 5px 5px;
+    font-size: 0.8rem;
+  }
+
+  .login-form, .signup-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .search-inputs {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .properties-form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .add-button {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .images {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
+/*end of media queris*/
 
 .nav-bar {
   background-color: #ffffff;
@@ -42,8 +180,136 @@ body {
   background-color: green;
 }
 
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100%;
+  background-color:aqua;
+  height: 100vh;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color:green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-options {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.google-login {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.google-login {
+  background-color:#288FB2;
+  color: white;
+}
+
+.register-option {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.register-option a {
+  color: #d32f2f;
+  text-decoration: none;
+}
+
+.register-option span {
+  margin-right: 5px;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: aqua;
+}
+
+.signup-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .search-bar-container {
-  background-color: mediumturquoise;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -89,7 +355,7 @@ body {
 }
 
 .hero-content {
-  height: 70vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,6 +364,7 @@ body {
   background-size: cover;
   margin-top: 10px;
   padding: 0 20px;
+  
 }
 
 .hero-content p {
@@ -144,3 +411,57 @@ body {
 .properties-to-buy-title {
   text-align: center;
 }
+
+
+
+
+.footer {
+  background-color: #A3ECE4;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section .social-media-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #333;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #333;
+  text-decoration: none;
+}
+

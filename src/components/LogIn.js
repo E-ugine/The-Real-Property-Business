@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+ 
 
 function LogIn({ setUser }) {
   const [username, setUsername] = useState("");
@@ -8,35 +9,47 @@ function LogIn({ setUser }) {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    // This is for mock authentication
     const user = { username };
     setUser(user);
-
     navigate("/");
   }
 
-   
   return (
-    <div>
-      <h2>Log In</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Log In</button>
-      </form>
+    <div className="login-container">
+      <div className="login-form">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="Username / Email address"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="login-button">Login</button>
+        </form>
+        <div className="login-options">
+          <a href="/forgot-password">Forgot password</a>
+          <div className="social-login">
+            
+            <button className="google-login">Google</button>
+          </div>
+        </div>
+        <div className="register-option">
+          <span>Do not have an account?</span> <a href="/sign">Sign Up</a>
+        </div>
+      </div>
     </div>
   );
 }

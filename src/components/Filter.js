@@ -13,11 +13,10 @@ function Filter({ search, setSearch, category, setCategory, categories = [] }) {
         <option value="">All Categories</option>
         {categories.map((cat, index) => (
           <option key={index} value={cat}>
-           
+            {cat}
           </option>
         ))}
       </select>
-      
     </div>
   );
 }
