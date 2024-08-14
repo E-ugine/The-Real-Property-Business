@@ -2,12 +2,14 @@
   "properties": [
     {
       "id": "1",
-      "description": "lavish 2 bedroom apartment",
+      "description": "lavish 3 bedroom apartment",
       "size": "2 bedroom",
       "category": "rental",
       "price": 150000,
-      "location": "Karen",
-      "image_url": ["https://media.istockphoto.com/id/1695936429/photo/business-towers-and-green-leaves-london.jpg?s=612x612&w=is&k=20&c=kQ8LybBBgNogXzCvYyUeFzJrqjgiax7bcUSC-GxWWsU="]
+      "location": "Kiambu",
+      "image_url": [
+        "https://media.istockphoto.com/id/1695936429/photo/business-towers-and-green-leaves-london.jpg?s=612x612&w=is&k=20&c=kQ8LybBBgNogXzCvYyUeFzJrqjgiax7bcUSC-GxWWsU="
+      ]
     },
     {
       "id": "2",
@@ -16,7 +18,9 @@
       "category": "rental",
       "price": 70000,
       "location": "langata",
-      "image_url": ["https://plus.unsplash.com/premium_photo-1678916185493-781b5b61b93b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"]
+      "image_url": [
+        "https://plus.unsplash.com/premium_photo-1678916185493-781b5b61b93b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      ]
     },
     {
       "id": "3",
@@ -25,7 +29,9 @@
       "category": "for sale",
       "price": 4500000,
       "location": "Karen",
-      "image_url": ["https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"]
+      "image_url": [
+        "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      ]
     },
     {
       "id": "4",
@@ -34,7 +40,9 @@
       "category": "rental",
       "price": 30000,
       "location": "Embakasi",
-      "image_url": ["https://images.unsplash.com/photo-1422818159909-e2fc50042acb?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"]
+      "image_url": [
+        "https://images.unsplash.com/photo-1422818159909-e2fc50042acb?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YnVpbGRpbmdzJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      ]
     },
     {
       "id": "5",
@@ -43,7 +51,9 @@
       "category": "rental",
       "price": 40000,
       "location": "Ruiru",
-      "image_url": ["https://images.unsplash.com/photo-1506812925688-822b4a73db22?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1aWxkaW5ncyUyMGludGVyaW9yfGVufDB8fDB8fHww"]
+      "image_url": [
+        "https://images.unsplash.com/photo-1506812925688-822b4a73db22?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJ1aWxkaW5ncyUyMGludGVyaW9yfGVufDB8fDB8fHww"
+      ]
     },
     {
       "id": "7",
@@ -52,7 +62,9 @@
       "category": "rental",
       "price": 100000,
       "location": "langata",
-      "image_url": ["https://media.istockphoto.com/id/1442364915/photo/contemporary-living-zone-with-living-room-outdoor-relaxation-space-with-tropical-garden-with.jpg?s=612x612&w=is&k=20&c=VIFVyibq-W7bFpccg58rzi0DZ6rQoL7mRM-AEJegM7c="]
+      "image_url": [
+        "https://media.istockphoto.com/id/1442364915/photo/contemporary-living-zone-with-living-room-outdoor-relaxation-space-with-tropical-garden-with.jpg?s=612x612&w=is&k=20&c=VIFVyibq-W7bFpccg58rzi0DZ6rQoL7mRM-AEJegM7c="
+      ]
     },
     {
       "id": "8",
@@ -61,7 +73,9 @@
       "category": "for sale",
       "price": 2000000,
       "location": "Roysambu",
-      "image_url": ["https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"]
+      "image_url": [
+        "https://plus.unsplash.com/premium_photo-1663126298656-33616be83c32?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      ]
     },
     {
       "id": "9",
@@ -70,7 +84,9 @@
       "category": "rental",
       "price": 60000,
       "location": "Roysambu",
-      "image_url": ["https://plus.unsplash.com/premium_photo-1674676471154-1acce154992d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"]
+      "image_url": [
+        "https://plus.unsplash.com/premium_photo-1674676471154-1acce154992d?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QXBhcnRtZW50JTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D"
+      ]
     },
     {
       "id": "10",
@@ -79,7 +95,9 @@
       "category": "for sale",
       "price": 3500000,
       "location": "Embakasi",
-      "image_url":[ "https://images.unsplash.com/photo-1675279200694-8529c73b1fd0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEFwYXJ0bWVudCUyMGludGVyaW9yfGVufDB8fDB8fHww"]
+      "image_url": [
+        "https://images.unsplash.com/photo-1675279200694-8529c73b1fd0?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEFwYXJ0bWVudCUyMGludGVyaW9yfGVufDB8fDB8fHww"
+      ]
     },
     {
       "id": "11",
@@ -88,63 +106,64 @@
       "category": "rental",
       "price": 80000,
       "location": "Kilimani",
-      "image_url": ["https://images.unsplash.com/photo-1723151811229-19ae77e3cca7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
+      "image_url": [
+        "https://images.unsplash.com/photo-1723151811229-19ae77e3cca7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
+    },
+    {
       "id": "12",
       "description": "villa",
       "size": "2 bedroom",
       "category": "for sle",
       "price": 80000,
       "location": "Kileleshwa",
-      "image_url": ["https://images.unsplash.com/photo-1723095429242-d4054358fa62?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
+      "image_url": [
+        "https://images.unsplash.com/photo-1723095429242-d4054358fa62?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDMzfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
+    },
+    {
       "id": "13",
       "description": "luxury Apartment",
       "size": "3 bedroom",
       "category": "rental",
       "price": 90000,
       "location": "Kitengela",
-      "image_url": ["https://images.unsplash.com/photo-1723059545021-320ea0f1b248?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
+      "image_url": [
+        "https://images.unsplash.com/photo-1723059545021-320ea0f1b248?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM2fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
+    },
+    {
       "id": "14",
       "description": "furnished Apartment",
       "size": "3 bedroom",
       "category": "for sale",
       "price": 6670000,
       "location": "Syokimau",
-      "image_url": ["https://images.unsplash.com/photo-1722044972733-e4103b622052?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
+      "image_url": [
+        "https://images.unsplash.com/photo-1722044972733-e4103b622052?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM3fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
+    },
+    {
       "id": "15",
       "description": "luxury Apartment",
       "size": "4 bedroom",
       "category": "rental",
       "price": 200000,
       "location": "Lamu",
-      "image_url": ["https://plus.unsplash.com/premium_photo-1714573189973-018546b10078?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQxfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
+      "image_url": [
+        "https://plus.unsplash.com/premium_photo-1714573189973-018546b10078?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQxfE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
+    },
+    {
       "id": "16",
       "description": "studio Apartment",
       "size": "studio",
       "category": "rental",
       "price": 60000,
       "location": "Upper Hill",
-      "image_url": ["https://images.unsplash.com/photo-1723037253038-5ac60929aec8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ1fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
-      "id": "17",
-      "description": "Cabin house",
-      "size": "2 bedroom",
-      "category": "for sale",
-      "price": 9000000,
-      "location": "Karen",
-      "image_url": ["https://images.unsplash.com/photo-1722962813132-60b5b663bb2c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDU1fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
-    }, {
-      "id": "18",
-      "description": "studio Apartment",
-      "size": "studio",
-      "category": "for sale",
-      "price": 690000,
-      "location": "Roysambu",
-      "image_url": ["https://plus.unsplash.com/premium_photo-1722103640460-fbd75ee69000?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDY4fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"]
+      "image_url": [
+        "https://images.unsplash.com/photo-1723037253038-5ac60929aec8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDQ1fE04alZiTGJUUndzfHxlbnwwfHx8fHw%3D"
+      ]
     }
   ]
 }

@@ -2,14 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function PropertiesCard({ property, onAdd, onDelete }) {
+  const handleDelete = () => {
+    fetch(`http://localhost:3000/properties/${property.id}`, {
+      method: 'DELETE',
+    })
+      .then(() => onDelete(property.id))
+      .catch((error) => console.error('Error deleting property:', error));
+  };
+
   return (
-    <div className='properties-form'>
+    <div className='properties-card'>
       <div>
         <img className='images' src={property.image_url} alt={property.description} />
         <h3>{property.location}</h3>
         <Link to={`/property/${property.id}`}>View</Link>
-<Link to={`/edit/${property.id}`}></Link>
-
+        <Link to={`/edit/${property.id}`}>
+          <button className='edit-button'>
+            Edit
+          </button>
+        </Link>
         <button 
           className='add-button' 
           onClick={() => onAdd(property)}
@@ -18,15 +29,10 @@ function PropertiesCard({ property, onAdd, onDelete }) {
         </button>
         <button 
           className='delete-button' 
-          onClick={() => onDelete(property.id)}
+          onClick={handleDelete}
         >
           Delete
         </button>
-        <Link to={`/edit/${property.id}`}>
-          <button className='edit-button'>
-            Edit
-          </button>
-        </Link>
       </div>
     </div>
   );

@@ -538,3 +538,13 @@ body {
 }
 
 
+.edit-property-container{
+  height: 70vh;
+}
+
+.enlarged-input {
+  width: 25%; 
+  height: 325%;
+}
+
+

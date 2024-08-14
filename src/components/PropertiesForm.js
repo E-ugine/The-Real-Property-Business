@@ -47,11 +47,12 @@ function PropertiesForm({ onUpdate }) {
   }
 
   return (
-    <div>
+    <div className='edit-property-container'>
       <h2>Update Property</h2>
       {property && (
         <form onSubmit={handleSubmit}>
           <input
+            className='enlarged-input edit-location' // Added class name
             type="text"
             placeholder="Location"
             value={location}
@@ -59,6 +60,7 @@ function PropertiesForm({ onUpdate }) {
             required
           />
           <input
+            className='enlarged-input' // Added class name
             type="text"
             placeholder="Description"
             value={description}
@@ -66,6 +68,7 @@ function PropertiesForm({ onUpdate }) {
             required
           />
           <input
+            className='enlarged-input' // Added class name
             type="text"
             placeholder="Image URL"
             value={imageUrl}
@@ -73,6 +76,7 @@ function PropertiesForm({ onUpdate }) {
             required
           />
           <input
+            className='enlarged-input' // Added class name
             type="text"
             placeholder="Category"
             value={category}

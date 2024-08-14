@@ -10,6 +10,7 @@ import SearchBar from './components/SearchBar';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import PropertyDetails from './components/PropertyDetails';
+import PropertiesForm from './components/PropertiesForm'; 
 import PrivateRoute from './components/PrivateRoute';
 import Footer from './components/Footer'; 
 
@@ -39,6 +40,21 @@ function App() {
       setSelectedHomes([...selectedHomes, propertyToBuy]);
     }
   }
+
+  function handleDeleteProperty(id) {
+    fetch(`http://localhost:3000/properties/${id}`, {
+      method: 'DELETE',
+    })
+      .then(() => {
+        setProperties(properties.filter(property => property.id !== id));
+        setSelectedHomes(selectedHomes.filter(property => property.id !== id));
+      })
+      .catch((error) => console.error('Error deleting property:', error));
+  }
+
+  const handleRemoveHome = (id) => {
+    setSelectedHomes(selectedHomes.filter(property => property.id !== id));
+  };
 
   const handleSearch = (searchLocation, searchMaxPrice) => {
     setLocation(searchLocation);
@@ -89,19 +105,22 @@ function App() {
                   <PropertiesList
                     properties={sortedProperties}
                     onAdd={handleBuyHome}
-                    onDelete={(id) => setSelectedHomes(selectedHomes.filter(property => property.id !== id))}
+                    onDelete={handleDeleteProperty}
                     location={location}
                     maxPrice={maxPrice}
                   />
                   <PropertiesToBuy
                     properties={selectedHomes}
-                    onAdd={handleBuyHome}
+                    onRemove={handleRemoveHome}
                   />
                 </>
               </PrivateRoute>
             } 
           />
           <Route path="/property/:id" element={<PropertyDetails properties={properties} />} />
+          <Route path="/edit/:id" element={<PropertiesForm onUpdate={(updatedProperty) => {
+            setProperties(properties.map(p => p.id === updatedProperty.id ? updatedProperty : p));
+          }} />} />
         </Routes>
         <Footer /> 
       </div>
