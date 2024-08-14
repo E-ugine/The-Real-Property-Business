@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
- 
 
 function LogIn({ setUser }) {
   const [username, setUsername] = useState("");
@@ -42,12 +41,11 @@ function LogIn({ setUser }) {
         <div className="login-options">
           <a href="/forgot-password">Forgot password</a>
           <div className="social-login">
-            
             <button className="google-login">Google</button>
           </div>
         </div>
         <div className="register-option">
-          <span>Do not have an account?</span> <a href="/sign">Sign Up</a>
+          <span>Do not have an account?</span> <a href="/signup">Sign Up</a>
         </div>
       </div>
     </div>

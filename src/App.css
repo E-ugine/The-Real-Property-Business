@@ -465,3 +465,76 @@ body {
   text-decoration: none;
 }
 
+.images {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.properties-form {
+  margin: 20px;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
+
+
+/* Properties List Styling */
+.properties-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.property-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.property-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.property-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.property-button {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%;
+  text-align: center;
+}
+
+.property-button:hover {
+  background-color: yellowgreen;
+}
+
+
