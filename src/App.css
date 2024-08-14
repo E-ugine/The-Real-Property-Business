@@ -108,6 +108,7 @@ body {
 }
 
 .properties-form {
+
   display: flex;
   flex-direction: row;
   width: 60%;
@@ -126,6 +127,8 @@ body {
 
 .images {
   max-width: 250px;
+  display: inline-flex;
+
 }
 
 .properties-to-buy-title {
