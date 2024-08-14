@@ -19,15 +19,13 @@ function App() {
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
+  useEffect(()=> {
     fetch('http://localhost:3000/properties')
-      .then((resp) => resp.json())
-      .then((data) => {
-        setProperties(data);
-        const uniqueCategories = [...new Set(data.map(property => property.category))];
-        setCategories(uniqueCategories);
-      });
-  }, []);
+    .then((resp) => resp.json())
+    .then((data) => {
+      setProperties(data)
+    })
+  },[])
 
   function handleBuyHome(propertyToBuy) {
     if (!selectedHomes.find((property) => property.id === propertyToBuy.id)) {

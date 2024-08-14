@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 
 function PropertyDetails({ properties }) {
-  const { id } = useParams();
-  const property = properties.find(p => p.id === parseInt(id));
+  const [property, setProperty] = useState({});
+  const params = useParams();
+  const propertyId = params.id;
 
-  if (!property) {
-    return <div>Property not found</div>;
-  }
+  useEffect(() =>{
+    fetch(`http://localhost:3000/properties/${propertyId}`)
+    .then(r => r.json())
+    .then(data => setProperty(data))
+    .catch(error => console.error(error));
+  }, [propertyId]);
 
   return (
     <div className='property-details'>

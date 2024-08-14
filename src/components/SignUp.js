@@ -1,4 +1,4 @@
-// src/components/SignUp.js
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,11 @@ function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> a14ae872f0a26ddc714f102671260067a1e61167
     navigate("/");
   }
 
