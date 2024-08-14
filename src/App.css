@@ -13,7 +13,7 @@ body {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content:space-between;
+  justify-content: space-between;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -28,7 +28,6 @@ body {
   flex: 1;
 }
 
-
 .nav-actions {
   margin-left: auto;
   display: flex;
@@ -38,7 +37,7 @@ body {
 .nav-actions a {
   margin-left: 20px;
   text-decoration: none;
-  color:blue;
+  color: blue;
   padding: 5px 10px;
   border-radius: 3px;
 }
@@ -56,24 +55,21 @@ body {
   margin-top: 5%;
   justify-content: center;
   height: 230px;
-  background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
- 
-  
+  background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg");
 }
-
 
 .search-inputs {
   display: flex;
   width: 100%;
   justify-content: center;
- border: none;
+  border: none;
 }
 
 .search-input {
   margin-right: 10px;
   border-radius: 5px;
   width: 300px;
- padding: 10px;
+  padding: 10px;
 }
 
 .search-button {
@@ -83,22 +79,19 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  
 }
 
 .search-button:hover {
   background-color: yellowgreen;
 }
 
-.hero-content { /* paragraph in hero can be styled here */
+.hero-content {
   height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-   /* background-image: url("https://assets.buyrentkenya.com/theme/brk/assets/home-top-CBGt4pFD.jpg"); 
-  background-position: center; */
   background-size: cover;
   margin-top: 60px;
 }
@@ -109,40 +102,33 @@ body {
   text-align: center;
 }
 
-.properties-list-title{
+.properties-list-title {
   color: mediumaquamarine;
   text-align: center;
 }
 
-
-.properties-form{
+.properties-form {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   width: 60%;
   height: 70%;
 }
 
-.add-button{
+.add-button {
   color: red;
   max-width: 70px;
   flex-direction: row-reverse;
-  max-width: 70px;
   padding: 5px;
   text-align: center;
-  flex: 1; 
-  margin:  5px;
+  flex: 1;
+  margin: 5px;
 }
 
-.images{
+.images {
   max-width: 250px;
 }
 
-
-
-.properties-to-buy-title{
+.properties-to-buy-title {
   text-align: center;
 }
-
-
-
 

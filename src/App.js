@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -10,6 +9,7 @@ import Filter from './components/Filter';
 import SearchBar from './components/SearchBar';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
+import PropertyDetails from './components/PropertyDetails'; 
 
 function App() {
   const [properties, setProperties] = useState([]);
@@ -24,8 +24,6 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => {
         setProperties(data);
-
-
         const uniqueCategories = [...new Set(data.map(property => property.category))];
         setCategories(uniqueCategories);
       });
@@ -61,7 +59,6 @@ function App() {
               <SearchBar 
                 search={search}
                 setSearch={setSearch}
-                
               />
               <Filter
                 search={search}
@@ -84,6 +81,7 @@ function App() {
           } />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
+          <Route path="/property/:id" element={<PropertyDetails properties={properties} />} /> 
         </Routes>
       </div>
     </Router>

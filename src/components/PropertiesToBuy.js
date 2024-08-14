@@ -1,5 +1,5 @@
 import React from 'react';
-import PropertiesForm from './PropertiesForm';
+import PropertiesCard from './PropertiesCard';
 
 function PropertiesToBuy({ properties = [], onAdd }) {
   return (
@@ -7,7 +7,7 @@ function PropertiesToBuy({ properties = [], onAdd }) {
       <h2 className='properties-to-buy-title'>My Properties</h2>
       <div className='properties-form'>
         {properties.map((property) => (
-          <PropertiesForm
+          <PropertiesCard
             key={property.id}
             property={property}
             onClick={() => onAdd(property)}

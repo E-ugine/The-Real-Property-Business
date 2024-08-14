@@ -1,17 +1,17 @@
-// src/components/PropertiesList.js
 import React from 'react';
-import PropertiesForm from './PropertiesForm';
+import PropertiesCard from './PropertiesCard';
 
-function PropertiesList({ properties, onAdd }) {
+function PropertiesList({ properties, onAdd, onDelete }) {
   return (
     <div className='properties-container'>
       <h2 className='properties-list-title'>Buy Your Dream Home Now!</h2>
       <div className='properties-form'>
         {properties.map((property) => (
-          <PropertiesForm 
+          <PropertiesCard 
             key={property.id}
             property={property}
             onAdd={onAdd}
+            onDelete={onDelete}
           />
         ))}
       </div>
