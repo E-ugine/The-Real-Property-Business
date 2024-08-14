@@ -11,10 +11,7 @@ function SignUp() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    // Perform sign-up logic here
-    // Example: Save user data to the server, etc.
 
-    // After sign-up logic, navigate back to the home page
     navigate("/");
   }
 

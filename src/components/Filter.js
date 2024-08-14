@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Filter({ search, setSearch, setSortBy, category, setCategory, categories = [] }) {
+function Filter({ search, setSearch, category, setCategory, categories = [] }) {
   return (
     <div>
       <input
