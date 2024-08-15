@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
@@ -10,9 +10,6 @@ import SearchBar from './components/SearchBar';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import PropertyDetails from './components/PropertyDetails';
-import PropertiesForm from './components/PropertiesForm'; 
-import PrivateRoute from './components/PrivateRoute';
-import Footer from './components/Footer'; 
 
 function App() {
   const [properties, setProperties] = useState([]);
@@ -21,9 +18,7 @@ function App() {
   const [sortBy, setSortBy] = useState("");
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([]);
-  const [location, setLocation] = useState("");
-  const [maxPrice, setMaxPrice] = useState("");
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(null); // Track the logged-in user
 
   useEffect(() => {
     fetch('http://localhost:3000/properties')
@@ -41,32 +36,9 @@ function App() {
     }
   }
 
-  function handleDeleteProperty(id) {
-    fetch(`http://localhost:3000/properties/${id}`, {
-      method: 'DELETE',
-    })
-      .then(() => {
-        setProperties(properties.filter(property => property.id !== id));
-        setSelectedHomes(selectedHomes.filter(property => property.id !== id));
-      })
-      .catch((error) => console.error('Error deleting property:', error));
-  }
-
-  const handleRemoveHome = (id) => {
-    setSelectedHomes(selectedHomes.filter(property => property.id !== id));
-  };
-
-  const handleSearch = (searchLocation, searchMaxPrice) => {
-    setLocation(searchLocation);
-    setMaxPrice(searchMaxPrice);
-    setSearch('');  // Clear search input after search is triggered
-  };
-
   const filteredProperties = properties
-    .filter(property => property.location.includes(search))
-    .filter(property => category === "" || property.category === category)
-    .filter(property => location === "" || property.location.includes(location))
-    .filter(property => maxPrice === "" || property.price <= parseInt(maxPrice));
+    .filter(property => property.location.toLowerCase().includes(search.toLowerCase()))
+    .filter(property => category === "" || property.category === category);
 
   const sortedProperties = [...filteredProperties].sort((a, b) => {
     if (sortBy === "location") {
@@ -85,45 +57,37 @@ function App() {
         <Routes>
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
           <Route path="/login" element={<LogIn setUser={setUser} />} />
-          <Route 
-            path="/" 
-            element={
-              <PrivateRoute user={user}>
-                <>
-                  <SearchBar
-                    search={search}
-                    setSearch={setSearch}
-                    onSearch={handleSearch}
-                  />
-                  <Filter
-                    search={search}
-                    setSearch={setSearch}
-                    category={category}
-                    setCategory={setCategory}
-                    categories={categories}
-                  />
-                  <Hero />
-                  <PropertiesList
-                    properties={sortedProperties}
-                    onAdd={handleBuyHome}
-                    onDelete={handleDeleteProperty}
-                    location={location}
-                    maxPrice={maxPrice}
-                  />
-                  <PropertiesToBuy
-                    properties={selectedHomes}
-                    onRemove={handleRemoveHome}
-                  />
-                </>
-              </PrivateRoute>
-            } 
-          />
-          <Route path="/property/:id" element={<PropertyDetails properties={properties} />} />
-          <Route path="/edit/:id" element={<PropertiesForm onUpdate={(updatedProperty) => {
-            setProperties(properties.map(p => p.id === updatedProperty.id ? updatedProperty : p));
-          }} />} />
+          <Route path="/" element={user ? (
+            <>
+              <SearchBar 
+                onSearch={setSearch}
+                category={category}
+                setCategory={setCategory}
+                categories={categories}
+              />
+              <Filter
+                search={search}
+                setSearch={setSearch}
+                setSortBy={setSortBy}
+                category={category}
+                setCategory={setCategory}
+                categories={categories}
+              />
+              <Hero />
+              <PropertiesList 
+                properties={sortedProperties} 
+                onAdd={handleBuyHome}
+              />
+              <PropertiesToBuy 
+                properties={selectedHomes} 
+                onAdd={handleBuyHome} 
+              />
+            </>
+          ) : (
+            <Navigate to="/login" />
+          )} />
+          <Route path="/property/:id" element={<PropertyDetails properties={properties} />} /> 
         </Routes>
-        <Footer /> 
       </div>
     </Router>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, category, setCategory, categories }) => {
   const [location, setLocation] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
 
@@ -27,6 +27,18 @@ const SearchBar = ({ onSearch }) => {
           value={maxPrice}
           onChange={(e) => setMaxPrice(e.target.value)}
         />
+        <select 
+          value={category} 
+          onChange={(e) => setCategory(e.target.value)} 
+          className="category-select"
+        >
+          <option value="">All Categories</option>
+          {categories.map((cat, index) => (
+            <option key={index} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
         <button className="search-button" onClick={handleSearchClick}>
           Search
         </button>
