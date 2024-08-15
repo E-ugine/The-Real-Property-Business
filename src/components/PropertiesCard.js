@@ -21,10 +21,11 @@ function PropertiesCard({ property, onAdd, onDelete }) {
         <Link to={`/property/${property.id}`}>View</Link>
        
           <div className='button-div'>
-          <button className='edit-button'>
+          <Link to={`/edit/${property.id}`}>
+          <button className="edit-button">
             Edit
           </button>
-        
+        </Link>
         <button 
           className='add-button' 
           onClick={() => onAdd(property)}

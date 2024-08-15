@@ -70,6 +70,7 @@ function App() {
         <Routes>
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
           <Route path="/login" element={<LogIn setUser={setUser} />} />
+          <Route path="/edit/:id" element={<PropertiesForm onUpdate={handleUpdateProperty} />} />
           <Route path="/" element={user ? (
             <>
               <SearchBar 
