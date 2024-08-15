@@ -11,16 +11,20 @@ function PropertiesCard({ property, onAdd, onDelete }) {
   };
 
   return (
+    <>
     <div className='properties-card'>
-      <div>
+     
+        <div className='property-image'>
         <img className='images' src={property.image_url} alt={property.description} />
+        </div>
         <h3>{property.location}</h3>
         <Link to={`/property/${property.id}`}>View</Link>
-        <Link to={`/edit/${property.id}`}>
+       
+          <div className='button-div'>
           <button className='edit-button'>
             Edit
           </button>
-        </Link>
+        
         <button 
           className='add-button' 
           onClick={() => onAdd(property)}
@@ -33,8 +37,10 @@ function PropertiesCard({ property, onAdd, onDelete }) {
         >
           Delete
         </button>
-      </div>
+          </div>
+      
     </div>
+    </>
   );
 }
 

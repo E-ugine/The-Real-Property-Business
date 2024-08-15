@@ -7,7 +7,7 @@ function PropertiesToBuy({ properties = [], onRemove }) {
       <h2 className='properties-to-buy-title'>My Properties</h2>
       <div className='properties-form'>
         {properties.map((property) => (
-          <div key={property.id} className='properties-card'>
+          <div key={property.id} className='properties-to-buy'>
             <div>
               <img className='images' src={property.image_url} alt={property.description} />
               <h3>{property.location}</h3>

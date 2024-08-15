@@ -228,7 +228,6 @@ body {
   background-size: cover;
   margin-top: 10px;
   padding: 0 20px;
-  
 }
 
 .hero-content p {
@@ -248,16 +247,33 @@ body {
   text-align: center;
 }
 
-.properties-form {
 
-  display: flex;
-  flex-direction: row;
-  width: 60%;
-  height: 70%;
+
+.properties{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 90vw;
+  margin: auto;
+
 }
 
+/* .properties-form {
+  display: grid;
+  width: 100vw;
+  height: 50vh;.properties-form {
+    display: grid;
+    width: 100vw;
+    height: 50vh;
+   gap: 20px;
+  }
+ gap: 20px;
+} */
+
+
 .add-button {
-  color: red;
+  color: green;
   max-width: 70px;
   flex-direction: row-reverse;
   padding: 5px;
@@ -266,14 +282,58 @@ body {
   margin: 5px;
 }
 
-.images {
-  max-width: 250px;
-  display: inline-flex;
-
+.properties-card{
+width: 25rem;
+border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8
 }
 
-.properties-to-buy-title {
-  text-align: center;
+
+.property-image {
+  height: 12rem;
+}
+
+
+.property-image img {
+  height: 100%;
+  width: 100%;
+}
+.button-div{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 2px ;
+}
+
+.add-button,
+.edit-button,
+.view-button,
+.delete-button {
+  display: flex;
+ justify-content: space-between;
+  margin:  5px;
+  padding: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+ 
+  border-radius: 8px;
+}
+
+.add-button {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.edit-button {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+
+.delete-button {
+  background-color: red;
+  color: white;
 }
 
 .footer {
@@ -331,7 +391,7 @@ body {
   text-decoration: none;
 }
 
-.edit-property-container{
+.edit-property-container {
   height: 70vh;
 }
 
@@ -343,6 +403,3 @@ body {
 .category-select {
   width: 150px;
 }
-
-
-

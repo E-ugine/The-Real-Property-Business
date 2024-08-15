@@ -10,9 +10,9 @@ function PropertiesList({ properties, onAdd, onDelete, location, maxPrice, categ
   });
 
   return (
-    <div className='properties-container'>
+    <div className='properties-list'>
       <h2 className='properties-list-title'>Buy Your Dream Home Now!</h2>
-      <div className='properties-form'>
+      <div className='properties'>
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property) => (
             <PropertiesCard 
