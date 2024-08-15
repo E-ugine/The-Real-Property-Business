@@ -5,12 +5,12 @@ import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import PropertiesList from './components/PropertiesList';
 import PropertiesToBuy from './components/PropertiesToBuy';
-import Filter from './components/Filter';
 import SearchBar from './components/SearchBar';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import PropertyDetails from './components/PropertyDetails';
-import Footer from './components/Footer'; // Import the Footer component
+import Footer from './components/Footer';
+import PropertiesForm from './components/PropertiesForm'; 
 
 function App() {
   const [properties, setProperties] = useState([]);
@@ -19,7 +19,7 @@ function App() {
   const [sortBy, setSortBy] = useState("");
   const [category, setCategory] = useState("");
   const [categories, setCategories] = useState([]);
-  const [user, setUser] = useState(null); // Track the logged-in user
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:3000/properties')
@@ -37,8 +37,20 @@ function App() {
     }
   }
 
+  function handleRemoveHome(propertyId) {
+    const updatedHomes = selectedHomes.filter(property => property.id !== propertyId);
+    setSelectedHomes(updatedHomes);
+  }
+
+  function handleUpdateProperty(updatedProperty) {
+    const updatedProperties = properties.map(property =>
+      property.id === updatedProperty.id ? updatedProperty : property
+    );
+    setProperties(updatedProperties);
+  }
+
   const filteredProperties = properties
-    .filter(property => property.location.toLowerCase().includes(search.toLowerCase()))
+    .filter(property => property.location.includes(search))
     .filter(property => category === "" || property.category === category);
 
   const sortedProperties = [...filteredProperties].sort((a, b) => {
@@ -53,7 +65,7 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container"> {/* Wrap with a container class */}
+      <div className="app-container">
         <NavBar user={user} />
         <Routes>
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
@@ -66,30 +78,25 @@ function App() {
                 setCategory={setCategory}
                 categories={categories}
               />
-              <Filter
-                search={search}
-                setSearch={setSearch}
-                setSortBy={setSortBy}
-                category={category}
-                setCategory={setCategory}
-                categories={categories}
-              />
+              
               <Hero />
               <PropertiesList 
                 properties={sortedProperties} 
                 onAdd={handleBuyHome}
+                onDelete={handleRemoveHome} 
               />
               <PropertiesToBuy 
                 properties={selectedHomes} 
-                onAdd={handleBuyHome} 
+                onRemove={handleRemoveHome} 
               />
             </>
           ) : (
             <Navigate to="/login" />
           )} />
-          <Route path="/property/:id" element={<PropertyDetails properties={properties} />} /> 
+          <Route path="/property/:id" element={<PropertyDetails properties={properties} />} />
+          <Route path="/edit/:id" element={<PropertiesForm onUpdate={handleUpdateProperty} />} /> 
         </Routes>
-        <Footer /> {/* Add the Footer component */}
+        <Footer />
       </div>
     </Router>
   );

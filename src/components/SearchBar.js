@@ -6,8 +6,8 @@ const SearchBar = ({ onSearch, category, setCategory, categories }) => {
 
   const handleSearchClick = () => {
     onSearch(location, maxPrice);
-    setLocation("");  // Clear the location input after search is triggered
-    setMaxPrice("");  // Clear the max price input after search is triggered
+    setLocation("");  
+    setMaxPrice(""); 
   };
 
   return (
