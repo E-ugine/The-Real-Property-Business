@@ -10,6 +10,7 @@ import SearchBar from './components/SearchBar';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import PropertyDetails from './components/PropertyDetails';
+import Footer from './components/Footer'; // Import the Footer component
 
 function App() {
   const [properties, setProperties] = useState([]);
@@ -52,7 +53,7 @@ function App() {
 
   return (
     <Router>
-      <div>
+      <div className="app-container"> {/* Wrap with a container class */}
         <NavBar user={user} />
         <Routes>
           <Route path="/signup" element={<SignUp setUser={setUser} />} />
@@ -88,6 +89,7 @@ function App() {
           )} />
           <Route path="/property/:id" element={<PropertyDetails properties={properties} />} /> 
         </Routes>
+        <Footer /> {/* Add the Footer component */}
       </div>
     </Router>
   );

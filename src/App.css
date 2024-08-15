@@ -420,6 +420,8 @@ body {
   padding: 20px 0;
   text-align: center;
   color: #333;
+  position: relative;
+  z-index: 10; /* Ensure it sits above other lower z-index content */
 }
 
 .footer-content {
@@ -427,8 +429,13 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 15px;
-
 }
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
 
 .footer-section h3 {
   margin-bottom: 10px;
