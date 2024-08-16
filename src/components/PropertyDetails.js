@@ -17,10 +17,11 @@ function PropertyDetails({ properties }) {
     <div className='property-details'>
       <img className='images' src={property.image_url} alt={property.description} />
       <h2>{property.location}</h2>
-      <p>{property.description}</p>
-      <p>Price: {property.price}</p>
-      <p>Category: {property.category}</p>
-      <p>Contact: {property.contact}</p>
+      <p> <strong>Description: </strong> {property.description}</p>
+      <p> <strong>Price: </strong> {property.price}</p>
+      <p> <strong>Category: </strong>{property.category}</p>
+
+     
     </div>
   );
 }

@@ -310,20 +310,20 @@ border-radius: 8px;
 }
 
 .add-button {
-  background-color: green;
-  color: silver;
+  
+  color: black;
  
 }
 
 .edit-button {
-  background-color: #fff3cd;
-  color: #856404;
+  background-color:#0b793b;
+  color: silver;
 }
 
 
 .delete-button {
-  background-color: #d9381e;
-  color: white;
+ 
+  color: black;
 }
 
 .remove-button{
