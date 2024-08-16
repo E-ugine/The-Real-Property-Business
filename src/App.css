@@ -2,6 +2,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
+  background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,94,0.16010154061624648) 28%);
 }
 
 .nav-bar {
@@ -19,7 +21,7 @@ body {
 
 .nav-brand {
   margin: 0;
-  color: aqua;
+  color: green;
   font-size: 1.5rem;
   flex: 1;
 }
@@ -234,6 +236,7 @@ body {
   max-width: 90%; 
   text-align: center; 
   margin-bottom: 20px;
+ text-align: left;
 }
 
 .hero-title {
@@ -243,7 +246,6 @@ body {
 }
 
 .properties-list-title {
-  color: mediumaquamarine;
   text-align: center;
 }
 
@@ -258,19 +260,6 @@ body {
   margin: auto;
 
 }
-
-/* .properties-form {
-  display: grid;
-  width: 100vw;
-  height: 50vh;.properties-form {
-    display: grid;
-    width: 100vw;
-    height: 50vh;
-   gap: 20px;
-  }
- gap: 20px;
-} */
-
 
 .add-button {
   color: green;
@@ -300,7 +289,7 @@ border-radius: 8px;
   width: 100%;
 }
 .button-div{
-  border: 1px solid black;
+ 
   display: flex;
   justify-content: space-around;
   margin: 0 2px ;
@@ -312,17 +301,18 @@ border-radius: 8px;
 .delete-button {
   display: flex;
  justify-content: space-between;
-  margin:  5px;
+  margin: 5px;
   padding: 5px;
   font-size: 0.9rem;
   cursor: pointer;
- 
   border-radius: 8px;
+ 
 }
 
 .add-button {
-  background-color: #f8d7da;
-  color: #721c24;
+  background-color: green;
+  color: silver;
+ 
 }
 
 .edit-button {
@@ -332,6 +322,11 @@ border-radius: 8px;
 
 
 .delete-button {
+  background-color: #d9381e;
+  color: white;
+}
+
+.remove-button{
   background-color: red;
   color: white;
 }

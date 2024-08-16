@@ -4,7 +4,7 @@ import PropertiesCard from './PropertiesCard';
 function PropertiesToBuy({ properties = [], onRemove }) {
   return (
     <div className='properties-to-buy'>
-      <h2 className='properties-to-buy-title'>My Properties</h2>
+      <h2 className='properties-to-buy-title'>Purchase List</h2>
       <div className='properties-form'>
         {properties.map((property) => (
           <div key={property.id} className='properties-to-buy'>
